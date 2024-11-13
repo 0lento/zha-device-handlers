@@ -12,6 +12,7 @@ from zhaquirks.const import (
     COMMAND_OFF,
     COMMAND_ON,
     COMMAND_PRESS,
+    COMMAND_RELEASE,
     COMMAND_STOP,
     COMMAND_STOP_ON_OFF,
     DIM_DOWN,
@@ -85,6 +86,11 @@ from zhaquirks.ikea import IKEA, DoublingPowerConfig2AAACluster, ScenesCluster
                     "param2": 0,
                 },
             },
+            (LONG_RELEASE, LEFT): {
+                COMMAND: COMMAND_RELEASE,
+                CLUSTER_ID: 5,
+                ENDPOINT_ID: 1,
+            },
             (SHORT_PRESS, RIGHT): {
                 COMMAND: COMMAND_PRESS,
                 CLUSTER_ID: 5,
@@ -103,6 +109,11 @@ from zhaquirks.ikea import IKEA, DoublingPowerConfig2AAACluster, ScenesCluster
                     "param1": 3328,
                     "param2": 0,
                 },
+            },
+            (LONG_RELEASE, RIGHT): {
+                COMMAND: COMMAND_RELEASE,
+                CLUSTER_ID: 5,
+                ENDPOINT_ID: 1,
             },
         }
     )
